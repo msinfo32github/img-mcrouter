@@ -11,4 +11,4 @@ COPY --from=builder /go/mc-router/mc-router /mc-router
 RUN adduser --home /nonexistent --no-create-home --disabled-password mc-router
 USER mc-router
 EXPOSE 25565
-CMD ["/mc-router", "--api-binding", "127.0.0.1:8080"]
+CMD ["/mc-router", "--api-binding", "0.0.0.0:8080"]
